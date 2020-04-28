@@ -10,6 +10,10 @@ public final class AppodealMediator: NSObject, AdsMediator {
     public weak var interstitialDelegate: AdsMediatorInterstitialDelegate?
     public weak var rewardedVideoDelegate: AdsMediatorRewardedVideoDelegate?
 
+    public var bannerSize: CGSize {
+        return UIDevice.current.userInterfaceIdiom == .phone ? kAppodealUnitSize_320x50 : kAppodealUnitSize_728x90
+    }
+    
     public init(apiKey: String) {
         self.apiKey = apiKey
         super.init()
@@ -17,20 +21,25 @@ public final class AppodealMediator: NSObject, AdsMediator {
 
     @discardableResult
     public func initialize(config: AdsConfig) -> Bool {
-        let adTypes: AppodealAdType = [.rewardedVideo, .interstitial]
-        
-        guard !Appodeal.isInitalized(for: adTypes) else {
+        guard !Appodeal.isInitalized(for: config.adTypes.appodeal) else {
             return false
         }
 
         Appodeal.setTestingEnabled(config.isTesting)
         Appodeal.setLogLevel(config.isVerbose ? .verbose : .warning)
-        Appodeal.setAutocache(false, types: [.rewardedVideo])
-        Appodeal.setAutocache(true, types: [.interstitial])
-        Appodeal.initialize(withApiKey: apiKey, types: adTypes, hasConsent: true)
+        Appodeal.setAutocache(false, types: config.adTypes.appodeal)
+        Appodeal.setAutocache(true, types: config.autocachedTypes.appodeal)
+        Appodeal.initialize(withApiKey: apiKey, types: config.adTypes.appodeal, hasConsent: true)
         Appodeal.setInterstitialDelegate(self)
         Appodeal.setRewardedVideoDelegate(self)
         return true
+    }
+    
+    public func loadBanner(in controller: UIViewController, for placement: String?) -> BannerView? {
+        let bannerView = AppodealBannerViewDecorator(size: bannerSize)
+        bannerView.sourceViewController = controller
+        bannerView.placement = placement
+        return bannerView
     }
 
     public func isReadyToShowInterstitial(for placement: String) -> Bool {
@@ -144,6 +153,24 @@ extension AppodealMediator: AppodealRewardedVideoDelegate {
     public func rewardedVideoDidClick() {
         DispatchQueue.main.async {
             self.rewardedVideoDelegate?.rewardedVideoDidClick()
+        }
+    }
+}
+
+private extension Array where Element == AdType {
+    var appodeal: AppodealAdType {
+        var type = AppodealAdType()
+        forEach { type.insert($0.appodeal) }
+        return type
+    }
+}
+
+private extension AdType {
+    var appodeal: AppodealAdType {
+        switch self {
+        case .banner: return .banner
+        case .interstitial: return .interstitial
+        case .rewardedVideo: return .rewardedVideo
         }
     }
 }

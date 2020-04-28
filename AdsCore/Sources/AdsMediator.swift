@@ -38,7 +38,12 @@ public protocol AdsRewardedVideoMediator {
     func loadRewardedVideo(for placement: String)
 }
 
-public protocol AdsMediator: AdsRewardedVideoMediator, AdsInterstitialMediator {
+public protocol AdsBannerMediator {
+    var bannerSize: CGSize { get }
+    func loadBanner(in controller: UIViewController, for placement: String?) -> BannerView?
+}
+
+public protocol AdsMediator: AdsRewardedVideoMediator, AdsInterstitialMediator, AdsBannerMediator {
     @discardableResult
     func initialize(config: AdsConfig) -> Bool
 }
