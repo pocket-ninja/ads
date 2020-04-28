@@ -3,21 +3,62 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3E40968C2BCCD0B630C794 /* Pods_AppodealMediator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE62C449DC973FFAD3A00B92 /* Pods_AppodealMediator.framework */; };
+		5E1FEA1538A4D44DBEC9F3D4 /* Pods_AdsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C227B02325EC94A185CA6D /* Pods_AdsCore.framework */; };
 		AC532BCB24586EFA00D590B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532BCA24586EFA00D590B3 /* AppDelegate.swift */; };
 		AC532BD424586EFE00D590B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC532BD324586EFE00D590B3 /* Assets.xcassets */; };
-		AC532BD724586EFE00D590B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC532BD524586EFE00D590B3 /* LaunchScreen.storyboard */; };
+		AC532C08245874AD00D590B3 /* AppodealMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C07245874AD00D590B3 /* AppodealMediator.swift */; };
+		AC532C14245874BF00D590B3 /* AdsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C09245874BE00D590B3 /* AdsService.swift */; };
+		AC532C15245874BF00D590B3 /* InterstitialPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0B245874BE00D590B3 /* InterstitialPlacement.swift */; };
+		AC532C16245874BF00D590B3 /* InterstitialProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0C245874BE00D590B3 /* InterstitialProvider.swift */; };
+		AC532C17245874BF00D590B3 /* RewardedVideoPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0E245874BE00D590B3 /* RewardedVideoPlacement.swift */; };
+		AC532C18245874BF00D590B3 /* RewardedVideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0F245874BE00D590B3 /* RewardedVideoProvider.swift */; };
+		AC532C1A245874BF00D590B3 /* AdsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C11245874BF00D590B3 /* AdsConfig.swift */; };
+		AC532C1B245874BF00D590B3 /* AdsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C12245874BF00D590B3 /* AdsMediator.swift */; };
+		AC532C1C245874BF00D590B3 /* AdsTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C13245874BF00D590B3 /* AdsTimer.swift */; };
+		AC94AB34245875850057AD3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC94AB33245875850057AD3F /* LaunchScreen.storyboard */; };
+		AC94AB38245875C30057AD3F /* AdsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = AC94AB36245875C30057AD3F /* AdsCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC94AB3B245875CC0057AD3F /* AppodealMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = AC94AB39245875CC0057AD3F /* AppodealMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC94AB3D245876460057AD3F /* AdsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC532BE52458736700D590B3 /* AdsCore.framework */; };
+		AC94AB40245877140057AD3F /* MockAdsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB3F245877140057AD3F /* MockAdsMediator.swift */; };
+		F808C8ADCBA46E22047C3B26 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775D141EAE66CC801B3EC730 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E9575B81C13326A67EF7AEC /* Pods-AdsCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdsCore.debug.xcconfig"; path = "Target Support Files/Pods-AdsCore/Pods-AdsCore.debug.xcconfig"; sourceTree = "<group>"; };
+		5E47CDDECA07289E29934FA7 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		70C227B02325EC94A185CA6D /* Pods_AdsCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdsCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		775D141EAE66CC801B3EC730 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2581193236A95B713E94F0 /* Pods-AppodealMediator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppodealMediator.release.xcconfig"; path = "Target Support Files/Pods-AppodealMediator/Pods-AppodealMediator.release.xcconfig"; sourceTree = "<group>"; };
+		9AD9B5C097FAA53A1B4C118C /* Pods-AdsCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdsCore.release.xcconfig"; path = "Target Support Files/Pods-AdsCore/Pods-AdsCore.release.xcconfig"; sourceTree = "<group>"; };
 		AC532BC724586EFA00D590B3 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC532BCA24586EFA00D590B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC532BD324586EFE00D590B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AC532BD624586EFE00D590B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC532BD824586EFE00D590B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC532BE52458736700D590B3 /* AdsCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdsCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC532BF72458737500D590B3 /* AppodealMediator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppodealMediator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC532C07245874AD00D590B3 /* AppodealMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppodealMediator.swift; sourceTree = "<group>"; };
+		AC532C09245874BE00D590B3 /* AdsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsService.swift; sourceTree = "<group>"; };
+		AC532C0B245874BE00D590B3 /* InterstitialPlacement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialPlacement.swift; sourceTree = "<group>"; };
+		AC532C0C245874BE00D590B3 /* InterstitialProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialProvider.swift; sourceTree = "<group>"; };
+		AC532C0E245874BE00D590B3 /* RewardedVideoPlacement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedVideoPlacement.swift; sourceTree = "<group>"; };
+		AC532C0F245874BE00D590B3 /* RewardedVideoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedVideoProvider.swift; sourceTree = "<group>"; };
+		AC532C11245874BF00D590B3 /* AdsConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsConfig.swift; sourceTree = "<group>"; };
+		AC532C12245874BF00D590B3 /* AdsMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsMediator.swift; sourceTree = "<group>"; };
+		AC532C13245874BF00D590B3 /* AdsTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsTimer.swift; sourceTree = "<group>"; };
+		AC94AB33245875850057AD3F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC94AB35245875C30057AD3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC94AB36245875C30057AD3F /* AdsCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsCore.h; sourceTree = "<group>"; };
+		AC94AB39245875CC0057AD3F /* AppodealMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppodealMediator.h; sourceTree = "<group>"; };
+		AC94AB3A245875CC0057AD3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC94AB3F245877140057AD3F /* MockAdsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdsMediator.swift; sourceTree = "<group>"; };
+		C6156C570F9B4721517C0ABA /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		E46223A1847464D89EEBA368 /* Pods-AppodealMediator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppodealMediator.debug.xcconfig"; path = "Target Support Files/Pods-AppodealMediator/Pods-AppodealMediator.debug.xcconfig"; sourceTree = "<group>"; };
+		EE62C449DC973FFAD3A00B92 /* Pods_AppodealMediator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppodealMediator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +66,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F808C8ADCBA46E22047C3B26 /* Pods_Demo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC532BE22458736700D590B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E1FEA1538A4D44DBEC9F3D4 /* Pods_AdsCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC532BF42458737500D590B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC94AB3D245876460057AD3F /* AdsCore.framework in Frameworks */,
+				1D3E40968C2BCCD0B630C794 /* Pods_AppodealMediator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,7 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				AC532BC924586EFA00D590B3 /* Demo */,
+				AC532BE62458736700D590B3 /* AdsCore */,
+				AC532BF82458737500D590B3 /* AppodealMediator */,
 				AC532BC824586EFA00D590B3 /* Products */,
+				D63F7EC496206A590CA0F7EF /* Pods */,
+				E0B40BA2C22E854CC9ED102E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -43,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				AC532BC724586EFA00D590B3 /* Demo.app */,
+				AC532BE52458736700D590B3 /* AdsCore.framework */,
+				AC532BF72458737500D590B3 /* AppodealMediator.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,8 +124,8 @@
 		AC532BDE24586FC600D590B3 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				AC94AB33245875850057AD3F /* LaunchScreen.storyboard */,
 				AC532BD324586EFE00D590B3 /* Assets.xcassets */,
-				AC532BD524586EFE00D590B3 /* LaunchScreen.storyboard */,
 				AC532BD824586EFE00D590B3 /* Info.plist */,
 			);
 			path = SupportingFiles;
@@ -74,13 +139,132 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		AC532BE62458736700D590B3 /* AdsCore */ = {
+			isa = PBXGroup;
+			children = (
+				AC532C032458738700D590B3 /* Sources */,
+				AC532C052458739100D590B3 /* SupportingFiles */,
+			);
+			path = AdsCore;
+			sourceTree = "<group>";
+		};
+		AC532BF82458737500D590B3 /* AppodealMediator */ = {
+			isa = PBXGroup;
+			children = (
+				AC532C042458738C00D590B3 /* Sources */,
+				AC532C06245873C500D590B3 /* SupportingFiles */,
+			);
+			path = AppodealMediator;
+			sourceTree = "<group>";
+		};
+		AC532C032458738700D590B3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AC94AB3F245877140057AD3F /* MockAdsMediator.swift */,
+				AC532C11245874BF00D590B3 /* AdsConfig.swift */,
+				AC532C12245874BF00D590B3 /* AdsMediator.swift */,
+				AC532C09245874BE00D590B3 /* AdsService.swift */,
+				AC532C13245874BF00D590B3 /* AdsTimer.swift */,
+				AC532C0A245874BE00D590B3 /* Interstitial */,
+				AC532C0D245874BE00D590B3 /* RewardedVideo */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AC532C042458738C00D590B3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AC532C07245874AD00D590B3 /* AppodealMediator.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AC532C052458739100D590B3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AC94AB36245875C30057AD3F /* AdsCore.h */,
+				AC94AB35245875C30057AD3F /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		AC532C06245873C500D590B3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AC94AB39245875CC0057AD3F /* AppodealMediator.h */,
+				AC94AB3A245875CC0057AD3F /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		AC532C0A245874BE00D590B3 /* Interstitial */ = {
+			isa = PBXGroup;
+			children = (
+				AC532C0B245874BE00D590B3 /* InterstitialPlacement.swift */,
+				AC532C0C245874BE00D590B3 /* InterstitialProvider.swift */,
+			);
+			path = Interstitial;
+			sourceTree = "<group>";
+		};
+		AC532C0D245874BE00D590B3 /* RewardedVideo */ = {
+			isa = PBXGroup;
+			children = (
+				AC532C0E245874BE00D590B3 /* RewardedVideoPlacement.swift */,
+				AC532C0F245874BE00D590B3 /* RewardedVideoProvider.swift */,
+			);
+			path = RewardedVideo;
+			sourceTree = "<group>";
+		};
+		D63F7EC496206A590CA0F7EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E9575B81C13326A67EF7AEC /* Pods-AdsCore.debug.xcconfig */,
+				9AD9B5C097FAA53A1B4C118C /* Pods-AdsCore.release.xcconfig */,
+				E46223A1847464D89EEBA368 /* Pods-AppodealMediator.debug.xcconfig */,
+				7D2581193236A95B713E94F0 /* Pods-AppodealMediator.release.xcconfig */,
+				C6156C570F9B4721517C0ABA /* Pods-Demo.debug.xcconfig */,
+				5E47CDDECA07289E29934FA7 /* Pods-Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E0B40BA2C22E854CC9ED102E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70C227B02325EC94A185CA6D /* Pods_AdsCore.framework */,
+				EE62C449DC973FFAD3A00B92 /* Pods_AppodealMediator.framework */,
+				775D141EAE66CC801B3EC730 /* Pods_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AC532BE02458736700D590B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC94AB38245875C30057AD3F /* AdsCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC532BF22458737500D590B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC94AB3B245875CC0057AD3F /* AppodealMediator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		AC532BC624586EFA00D590B3 /* Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC532BDB24586EFE00D590B3 /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
+				88588013415DFC40381C39CB /* [CP] Check Pods Manifest.lock */,
 				AC532BC324586EFA00D590B3 /* Sources */,
 				AC532BC424586EFA00D590B3 /* Frameworks */,
 				AC532BC524586EFA00D590B3 /* Resources */,
@@ -94,6 +278,45 @@
 			productReference = AC532BC724586EFA00D590B3 /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AC532BE42458736700D590B3 /* AdsCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC532BEE2458736700D590B3 /* Build configuration list for PBXNativeTarget "AdsCore" */;
+			buildPhases = (
+				69DF879A3E03FBE45E5D2C82 /* [CP] Check Pods Manifest.lock */,
+				AC532BE02458736700D590B3 /* Headers */,
+				AC532BE12458736700D590B3 /* Sources */,
+				AC532BE22458736700D590B3 /* Frameworks */,
+				AC532BE32458736700D590B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdsCore;
+			productName = AdsCore;
+			productReference = AC532BE52458736700D590B3 /* AdsCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AC532BF62458737500D590B3 /* AppodealMediator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC532C002458737500D590B3 /* Build configuration list for PBXNativeTarget "AppodealMediator" */;
+			buildPhases = (
+				AF9ACD09729D113CAF96C3A5 /* [CP] Check Pods Manifest.lock */,
+				AC532BF22458737500D590B3 /* Headers */,
+				AC532BF32458737500D590B3 /* Sources */,
+				AC532BF42458737500D590B3 /* Frameworks */,
+				AC532BF52458737500D590B3 /* Resources */,
+				7D610C59C85EF71E41C73D57 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppodealMediator;
+			productName = AppodealMediator;
+			productReference = AC532BF72458737500D590B3 /* AppodealMediator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -106,6 +329,14 @@
 				TargetAttributes = {
 					AC532BC624586EFA00D590B3 = {
 						CreatedOnToolsVersion = 11.4;
+					};
+					AC532BE42458736700D590B3 = {
+						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
+					};
+					AC532BF62458737500D590B3 = {
+						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -123,6 +354,8 @@
 			projectRoot = "";
 			targets = (
 				AC532BC624586EFA00D590B3 /* Demo */,
+				AC532BE42458736700D590B3 /* AdsCore */,
+				AC532BF62458737500D590B3 /* AppodealMediator */,
 			);
 		};
 /* End PBXProject section */
@@ -132,12 +365,112 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC532BD724586EFE00D590B3 /* LaunchScreen.storyboard in Resources */,
 				AC532BD424586EFE00D590B3 /* Assets.xcassets in Resources */,
+				AC94AB34245875850057AD3F /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC532BE32458736700D590B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC532BF52458737500D590B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69DF879A3E03FBE45E5D2C82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdsCore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D610C59C85EF71E41C73D57 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppodealMediator/Pods-AppodealMediator-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppodealMediator/Pods-AppodealMediator-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppodealMediator/Pods-AppodealMediator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88588013415DFC40381C39CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF9ACD09729D113CAF96C3A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppodealMediator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC532BC324586EFA00D590B3 /* Sources */ = {
@@ -148,18 +481,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AC532BD524586EFE00D590B3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC532BD624586EFE00D590B3 /* Base */,
+		AC532BE12458736700D590B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC532C1B245874BF00D590B3 /* AdsMediator.swift in Sources */,
+				AC532C1C245874BF00D590B3 /* AdsTimer.swift in Sources */,
+				AC532C14245874BF00D590B3 /* AdsService.swift in Sources */,
+				AC532C18245874BF00D590B3 /* RewardedVideoProvider.swift in Sources */,
+				AC532C17245874BF00D590B3 /* RewardedVideoPlacement.swift in Sources */,
+				AC94AB40245877140057AD3F /* MockAdsMediator.swift in Sources */,
+				AC532C15245874BF00D590B3 /* InterstitialPlacement.swift in Sources */,
+				AC532C16245874BF00D590B3 /* InterstitialProvider.swift in Sources */,
+				AC532C1A245874BF00D590B3 /* AdsConfig.swift in Sources */,
 			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXVariantGroup section */
+		AC532BF32458737500D590B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC532C08245874AD00D590B3 /* AppodealMediator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		AC532BD924586EFE00D590B3 /* Debug */ = {
@@ -278,6 +624,7 @@
 		};
 		AC532BDC24586EFE00D590B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6156C570F9B4721517C0ABA /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +646,7 @@
 		};
 		AC532BDD24586EFE00D590B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E47CDDECA07289E29934FA7 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +663,132 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC532BEF2458736700D590B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E9575B81C13326A67EF7AEC /* Pods-AdsCore.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9Q262Z5T3C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AdsCore/SupportingFiles/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketninja.AdsCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AC532BF02458736700D590B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AD9B5C097FAA53A1B4C118C /* Pods-AdsCore.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9Q262Z5T3C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AdsCore/SupportingFiles/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketninja.AdsCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AC532C012458737500D590B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E46223A1847464D89EEBA368 /* Pods-AppodealMediator.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9Q262Z5T3C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppodealMediator/SupportingFiles/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketninja.AppodealMediator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AC532C022458737500D590B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D2581193236A95B713E94F0 /* Pods-AppodealMediator.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9Q262Z5T3C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppodealMediator/SupportingFiles/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketninja.AppodealMediator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -335,6 +809,24 @@
 			buildConfigurations = (
 				AC532BDC24586EFE00D590B3 /* Debug */,
 				AC532BDD24586EFE00D590B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC532BEE2458736700D590B3 /* Build configuration list for PBXNativeTarget "AdsCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC532BEF2458736700D590B3 /* Debug */,
+				AC532BF02458736700D590B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC532C002458737500D590B3 /* Build configuration list for PBXNativeTarget "AppodealMediator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC532C012458737500D590B3 /* Debug */,
+				AC532C022458737500D590B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
