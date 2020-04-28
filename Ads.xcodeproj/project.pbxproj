@@ -56,6 +56,7 @@
 		AC94AB39245875CC0057AD3F /* AppodealMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppodealMediator.h; sourceTree = "<group>"; };
 		AC94AB3A245875CC0057AD3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC94AB3F245877140057AD3F /* MockAdsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdsMediator.swift; sourceTree = "<group>"; };
+		AC94AB41245878D10057AD3F /* Ads.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ads.podspec; sourceTree = "<group>"; };
 		C6156C570F9B4721517C0ABA /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		E46223A1847464D89EEBA368 /* Pods-AppodealMediator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppodealMediator.debug.xcconfig"; path = "Target Support Files/Pods-AppodealMediator/Pods-AppodealMediator.debug.xcconfig"; sourceTree = "<group>"; };
 		EE62C449DC973FFAD3A00B92 /* Pods_AppodealMediator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppodealMediator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +94,7 @@
 		AC532BBE24586EFA00D590B3 = {
 			isa = PBXGroup;
 			children = (
+				AC94AB41245878D10057AD3F /* Ads.podspec */,
 				AC532BC924586EFA00D590B3 /* Demo */,
 				AC532BE62458736700D590B3 /* AdsCore */,
 				AC532BF82458737500D590B3 /* AppodealMediator */,
@@ -306,7 +308,6 @@
 				AC532BF32458737500D590B3 /* Sources */,
 				AC532BF42458737500D590B3 /* Frameworks */,
 				AC532BF52458737500D590B3 /* Resources */,
-				7D610C59C85EF71E41C73D57 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -407,23 +408,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7D610C59C85EF71E41C73D57 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppodealMediator/Pods-AppodealMediator-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppodealMediator/Pods-AppodealMediator-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppodealMediator/Pods-AppodealMediator-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		88588013415DFC40381C39CB /* [CP] Check Pods Manifest.lock */ = {
