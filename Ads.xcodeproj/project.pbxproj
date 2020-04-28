@@ -28,6 +28,17 @@
 		AC94AB442458933D0057AD3F /* BannerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB432458933D0057AD3F /* BannerProvider.swift */; };
 		AC94AB46245897F90057AD3F /* AppodealBannerViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB45245897F90057AD3F /* AppodealBannerViewDecorator.swift */; };
 		AC94AB482458996E0057AD3F /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB472458996E0057AD3F /* BannerView.swift */; };
+		AC94AB492458A1040057AD3F /* MockAdsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB3F245877140057AD3F /* MockAdsMediator.swift */; };
+		AC94AB4A2458A1040057AD3F /* AdsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C11245874BF00D590B3 /* AdsConfig.swift */; };
+		AC94AB4B2458A1040057AD3F /* AdsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C12245874BF00D590B3 /* AdsMediator.swift */; };
+		AC94AB4C2458A1040057AD3F /* AdsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C09245874BE00D590B3 /* AdsService.swift */; };
+		AC94AB4D2458A1040057AD3F /* AdsTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C13245874BF00D590B3 /* AdsTimer.swift */; };
+		AC94AB4E2458A1040057AD3F /* BannerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB432458933D0057AD3F /* BannerProvider.swift */; };
+		AC94AB4F2458A1040057AD3F /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB472458996E0057AD3F /* BannerView.swift */; };
+		AC94AB502458A1040057AD3F /* InterstitialPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0B245874BE00D590B3 /* InterstitialPlacement.swift */; };
+		AC94AB512458A1040057AD3F /* InterstitialProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0C245874BE00D590B3 /* InterstitialProvider.swift */; };
+		AC94AB522458A1040057AD3F /* RewardedVideoPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0E245874BE00D590B3 /* RewardedVideoPlacement.swift */; };
+		AC94AB532458A1040057AD3F /* RewardedVideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0F245874BE00D590B3 /* RewardedVideoProvider.swift */; };
 		F808C8ADCBA46E22047C3B26 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775D141EAE66CC801B3EC730 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +70,7 @@
 		AC94AB39245875CC0057AD3F /* AppodealMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppodealMediator.h; sourceTree = "<group>"; };
 		AC94AB3A245875CC0057AD3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC94AB3F245877140057AD3F /* MockAdsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdsMediator.swift; sourceTree = "<group>"; };
-		AC94AB41245878D10057AD3F /* Ads.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ads.podspec; sourceTree = "<group>"; };
+		AC94AB41245878D10057AD3F /* Ads.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ads.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AC94AB432458933D0057AD3F /* BannerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerProvider.swift; sourceTree = "<group>"; };
 		AC94AB45245897F90057AD3F /* AppodealBannerViewDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppodealBannerViewDecorator.swift; sourceTree = "<group>"; };
 		AC94AB472458996E0057AD3F /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
@@ -504,8 +515,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC94AB4E2458A1040057AD3F /* BannerProvider.swift in Sources */,
+				AC94AB4A2458A1040057AD3F /* AdsConfig.swift in Sources */,
 				AC94AB46245897F90057AD3F /* AppodealBannerViewDecorator.swift in Sources */,
+				AC94AB4C2458A1040057AD3F /* AdsService.swift in Sources */,
+				AC94AB4B2458A1040057AD3F /* AdsMediator.swift in Sources */,
+				AC94AB4F2458A1040057AD3F /* BannerView.swift in Sources */,
+				AC94AB532458A1040057AD3F /* RewardedVideoProvider.swift in Sources */,
+				AC94AB4D2458A1040057AD3F /* AdsTimer.swift in Sources */,
+				AC94AB502458A1040057AD3F /* InterstitialPlacement.swift in Sources */,
 				AC532C08245874AD00D590B3 /* AppodealMediator.swift in Sources */,
+				AC94AB522458A1040057AD3F /* RewardedVideoPlacement.swift in Sources */,
+				AC94AB512458A1040057AD3F /* InterstitialProvider.swift in Sources */,
+				AC94AB492458A1040057AD3F /* MockAdsMediator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,20 @@ Pod::Spec.new do |s|
 
     s.subspec 'AppodealMediator' do |appodeal|
       appodeal.source_files = 'AppodealMediator/Sources/**/*.{h,m,swift}'
-      appodeal.dependency 'Appodeal', '>= 2.6.3'
       appodeal.dependency 'Ads/Core'
+      
+      appodeal.dependency 'Appodeal', '>= 2.6.3'
+      appodeal.dependency 'APDAdColonyAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDAppLovinAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDAppodealAdExchangeAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDFacebookAudienceAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDGoogleAdMobAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDInMobiAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDInnerActiveAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDIronSourceAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDMyTargetAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDMintegralAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDPubnativeAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'APDVungleAdapter', '>= 2.6.3.1'
     end
   end

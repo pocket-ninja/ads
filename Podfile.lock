@@ -1,11 +1,9 @@
 PODS:
-  - Ads (1.0.0):
-    - Ads/Core (= 1.0.0)
   - Ads/Core (1.0.0)
   - Appodeal (2.6.3)
 
 DEPENDENCIES:
-  - Ads (from `./Ads.podspec`)
+  - Ads/Core (from `./Ads.podspec`)
   - Appodeal (= 2.6.3)
 
 SPEC REPOS:
@@ -17,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "./Ads.podspec"
 
 SPEC CHECKSUMS:
-  Ads: 95e5fe25f787d1454c90d6cddaae8ae4cea81349
+  Ads: f9fdd364da82f05cef5e511f2598ea8d4db1f59b
   Appodeal: 66ef7fa481aadd664ac45f1be505307bf7f2be3e
 
-PODFILE CHECKSUM: c5592857a84b8a03eff7ab1928d733f22dc4dd13
+PODFILE CHECKSUM: 9bd70cc452c4cf0bf62936bac27ad295a470b5ed
 
 COCOAPODS: 1.9.1

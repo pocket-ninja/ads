@@ -4,7 +4,6 @@
 
 import Appodeal
 import UIKit
-import AdsCore
 
 public final class AppodealMediator: NSObject, AdsMediator {
     public weak var interstitialDelegate: AdsMediatorInterstitialDelegate?
