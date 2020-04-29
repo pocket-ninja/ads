@@ -64,15 +64,16 @@ public final class InterstitialProvider {
         return true
     }
     
+    @discardableResult
     public func provide(
         for placement: InterstitialPlacement,
         from controller: UIViewController,
         then completion: Completion? = nil
-    ) {
-        guard canProvide() else {
-            return
+    ) -> Bool {
+        guard canProvide(), placement.isEnabled else {
+            return false
         }
-        
+         
         cancel(result: .cancelled)
         self.completion = completion
         
@@ -81,6 +82,8 @@ public final class InterstitialProvider {
                 self?.showLoadedInterstitial(for: placement.name, from: controller)
             }
         }
+
+        return true
     }
     
     private func showLoadedInterstitial(for placement: String, from controller: UIViewController) {

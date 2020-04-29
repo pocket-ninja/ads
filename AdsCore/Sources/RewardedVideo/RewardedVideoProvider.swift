@@ -46,13 +46,14 @@ public final class RewardedVideoProvider {
         }
     }
     
+    @discardableResult
     public func provide(
         for placement: RewardedVideoPlacement,
         from controller: UIViewController,
         then completion: @escaping Completion
-    ) {
+    ) -> Bool {
         guard isEnabled else {
-            return
+            return false
         }
         
         cancel()
@@ -63,6 +64,8 @@ public final class RewardedVideoProvider {
                 self?.showLoadedVideo(for: placement.name, from: controller)
             }
         }
+        
+        return true
     }
     
     private func showLoadedVideo(for placement: String, from controller: UIViewController) {
