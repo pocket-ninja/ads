@@ -55,7 +55,7 @@ final class AppodealBannerViewDecorator: UIView, BannerView {
 }
 
 extension AppodealBannerViewDecorator: AppodealBannerViewDelegate {
-    public func bannerViewDidLoadAd(_ bannerView: APDBannerView) {
+    public func bannerViewDidLoadAd(_ bannerView: APDBannerView, isPrecache precache: Bool) {
         delegate?.bannerViewLoaded(self)
     }
 

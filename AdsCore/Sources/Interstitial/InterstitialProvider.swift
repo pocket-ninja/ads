@@ -41,6 +41,12 @@ public final class InterstitialProvider {
         timer.invalidate()
     }
     
+    public func preaload(for placement: InterstitialPlacement) {
+        if isEnabled, state == .unknown {
+            mediator.loadInterstitial(for: placement.name)
+        }
+    }
+    
     private func canProvide() -> Bool {
         guard isEnabled else {
             return false
