@@ -41,7 +41,7 @@ public final class InterstitialProvider {
         timer.invalidate()
     }
     
-    public func preaload(for placement: InterstitialPlacement) {
+    public func preload(for placement: InterstitialPlacement) {
         if isEnabled, state == .unknown {
             mediator.loadInterstitial(for: placement.name)
         }
