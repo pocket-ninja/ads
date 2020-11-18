@@ -8,11 +8,11 @@ Pod::Spec.new do |s|
     s.license = { :type => 'Pivate', :file => 'LICENSE', :text => 'LICENSE' }
     s.author = { 'sroik' => 'vasili.kazhanouski@gmail.com' }
     s.source = { :git => 'git@github.com:pocket-ninja/ads.git', :tag => s.version.to_s }
-    s.ios.deployment_target = '11.0'
+    s.ios.deployment_target = '12.0'
     s.requires_arc = true
     s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 arm64e armv7 armv7s x86_64' }
     s.static_framework = true
-    s.swift_version = '5.0'
+    s.swift_version = '5.3'
     s.default_subspec = 'Core'
 
     s.subspec 'Core' do |core|
@@ -23,18 +23,18 @@ Pod::Spec.new do |s|
       appodeal.source_files = 'AppodealMediator/Sources/**/*.{h,m,swift}'
       appodeal.dependency 'Ads/Core'
       
-      appodeal.dependency 'Appodeal', '>= 2.6.3'
-      appodeal.dependency 'APDAdColonyAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDAppLovinAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDAppodealAdExchangeAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDFacebookAudienceAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDGoogleAdMobAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDInMobiAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDInnerActiveAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDIronSourceAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDMyTargetAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDMintegralAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDPubnativeAdapter', '>= 2.6.3.1'
-      appodeal.dependency 'APDVungleAdapter', '>= 2.6.3.1'
+      appodeal.dependency 'Appodeal', '>= 2.7.5'
+      appodeal.dependency 'APDAdColonyAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDAppLovinAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDAppodealAdExchangeAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDFacebookAudienceAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDGoogleAdMobAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDInMobiAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDInnerActiveAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDIronSourceAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDMyTargetAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDMintegralAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDPubnativeAdapter', '>= 2.7.5.1'
+      appodeal.dependency 'APDVungleAdapter', '>= 2.7.5.1'
     end
   end
