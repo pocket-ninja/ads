@@ -47,7 +47,7 @@ public final class InterstitialProvider {
         }
     }
     
-    private func canProvide() -> Bool {
+    public func canProvide() -> Bool {
         guard isEnabled else {
             return false
         }
