@@ -3,7 +3,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 def appodeal
-  pod 'Appodeal', '2.7.5'
+  pod 'Appodeal', '2.8.1'
 end
 
 target 'Demo' do

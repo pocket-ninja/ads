@@ -1,23 +1,68 @@
 PODS:
   - Ads/Core (1.0.0)
-  - Appodeal (2.7.5)
+  - Appodeal (2.8.1):
+    - Protobuf (~> 3.12)
+    - StackIAB (~> 1.1.2)
+    - StackModules (~> 1.0.2)
+  - Protobuf (3.14.0)
+  - StackIAB (1.1.2):
+    - StackIAB/StackMRAIDKit (= 1.1.2)
+    - StackIAB/StackNASTKit (= 1.1.2)
+    - StackIAB/StackRichMedia (= 1.1.2)
+    - StackIAB/StackVASTAssets (= 1.1.2)
+    - StackIAB/StackVASTKit (= 1.1.2)
+    - StackIAB/StackVideoPlayer (= 1.1.2)
+    - StackIAB/StackXML (= 1.1.2)
+    - StackModules (~> 1.0.0)
+  - StackIAB/StackMRAIDKit (1.1.2):
+    - StackModules (~> 1.0.0)
+  - StackIAB/StackNASTKit (1.1.2):
+    - StackIAB/StackVASTKit
+    - StackModules (~> 1.0.0)
+  - StackIAB/StackRichMedia (1.1.2):
+    - StackIAB/StackVASTAssets
+    - StackIAB/StackVideoPlayer
+    - StackModules (~> 1.0.0)
+  - StackIAB/StackVASTAssets (1.1.2):
+    - StackIAB/StackXML
+    - StackModules (~> 1.0.0)
+  - StackIAB/StackVASTKit (1.1.2):
+    - StackIAB/StackMRAIDKit
+    - StackIAB/StackVASTAssets
+    - StackIAB/StackVideoPlayer
+    - StackModules (~> 1.0.0)
+  - StackIAB/StackVideoPlayer (1.1.2):
+    - StackModules (~> 1.0.0)
+  - StackIAB/StackXML (1.1.2):
+    - StackModules (~> 1.0.0)
+  - StackModules (1.0.2):
+    - StackModules/StackUIKit (= 1.0.2)
+  - StackModules/StackFoundation (1.0.2)
+  - StackModules/StackUIKit (1.0.2):
+    - StackModules/StackFoundation
 
 DEPENDENCIES:
   - Ads/Core (from `./Ads.podspec`)
-  - Appodeal (= 2.7.5)
+  - Appodeal (= 2.8.1)
 
 SPEC REPOS:
   trunk:
     - Appodeal
+    - Protobuf
+    - StackIAB
+    - StackModules
 
 EXTERNAL SOURCES:
   Ads:
     :path: "./Ads.podspec"
 
 SPEC CHECKSUMS:
-  Ads: c4cc061f9cece60107a68a065b97a35d2005a58f
-  Appodeal: bbcfbf63be492476f235bac82af1afffdcec5684
+  Ads: c325bb7a5843c2f38af9ba1635695bacf39e42a4
+  Appodeal: bf9748c013eb1e91d973391130fab386ef947779
+  Protobuf: 0cde852566359049847168e51bd1c690e0f70056
+  StackIAB: 14975a45de9e3b78fdb0845ab1438af218e42431
+  StackModules: bdce04cf8a281cfbd982e43f90d90df23166f0fa
 
-PODFILE CHECKSUM: 38d976142a2f22fafd4171d95d28bbf481dd4fdc
+PODFILE CHECKSUM: 958db497246df28ab2e14d5d5c6bdfee8c289667
 
 COCOAPODS: 1.9.1
