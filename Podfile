@@ -1,4 +1,4 @@
-platform :ios, '11.0'
+platform :ios, '12.0'
 inhibit_all_warnings!
 use_frameworks!
 
@@ -8,6 +8,7 @@ end
 
 target 'Demo' do
     pod 'Ads/Core', :path => './Ads.podspec'
+#    pod 'Ads/AppodealAdapters', :path => './Ads.podspec'
 end
 
 target 'AdsCore' do
