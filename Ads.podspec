@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name = 'Ads'
     s.module_name = 'Ads'
-    s.version = '1.0.0'
+    s.version = '1.0.1'
     s.summary = 'Pocket Ninja Ads'
     s.description = 'Pocket Ninja Ads'
     s.homepage = 'https://github.com/pocket-ninja/ads'
