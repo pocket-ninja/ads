@@ -15,4 +15,5 @@ end
 
 target 'AppodealMediator' do
   appodeal
+  pod 'PocketAds', :path => './PocketAds.podspec'
 end

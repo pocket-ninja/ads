@@ -4,6 +4,7 @@
 
 import Appodeal
 import UIKit
+import PocketAds
 
 public final class AppodealMediator: NSObject, AdsMediator {
     public weak var interstitialDelegate: AdsMediatorInterstitialDelegate?

@@ -4,6 +4,7 @@
 
 import Appodeal
 import UIKit
+import PocketAds
 
 final class AppodealBannerViewDecorator: UIView, BannerView {
     weak var delegate: BannerViewDelegate?

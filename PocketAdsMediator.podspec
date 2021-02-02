@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.swift_version = '5.3'
     s.default_subspec = 'Core'
 
-    s.subspec 'Core' do |core|
+    s.subspec 'Core' do |c|
       c.dependency 'PocketAds'
     end
 

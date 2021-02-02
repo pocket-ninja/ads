@@ -3,7 +3,7 @@ PODS:
     - Protobuf (~> 3.12)
     - StackIAB (~> 1.1.2)
     - StackModules (~> 1.0.2)
-  - PocketAds (1.2.2)
+  - PocketAds (1.2.3)
   - Protobuf (3.14.0)
   - StackIAB (1.1.2):
     - StackIAB/StackMRAIDKit (= 1.1.2)
@@ -58,11 +58,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Appodeal: bf9748c013eb1e91d973391130fab386ef947779
-  PocketAds: 656f553f735a8707f1b00a6f48b5db21543f1934
+  PocketAds: 952f7a84b9c6405dfe4665685841a5a28ced3cab
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
   StackIAB: 14975a45de9e3b78fdb0845ab1438af218e42431
   StackModules: bdce04cf8a281cfbd982e43f90d90df23166f0fa
 
-PODFILE CHECKSUM: 88f029e9679430a5789635ec4b72e76f46af182f
+PODFILE CHECKSUM: 3bc97a012114d25a317c2073e2e944866dfbd175
 
 COCOAPODS: 1.10.1

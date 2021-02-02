@@ -23,22 +23,10 @@
 		AC94AB34245875850057AD3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC94AB33245875850057AD3F /* LaunchScreen.storyboard */; };
 		AC94AB38245875C30057AD3F /* AdsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = AC94AB36245875C30057AD3F /* AdsCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC94AB3B245875CC0057AD3F /* AppodealMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = AC94AB39245875CC0057AD3F /* AppodealMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC94AB3D245876460057AD3F /* AdsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC532BE52458736700D590B3 /* AdsCore.framework */; };
 		AC94AB40245877140057AD3F /* MockAdsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB3F245877140057AD3F /* MockAdsMediator.swift */; };
 		AC94AB442458933D0057AD3F /* BannerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB432458933D0057AD3F /* BannerProvider.swift */; };
 		AC94AB46245897F90057AD3F /* AppodealBannerViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB45245897F90057AD3F /* AppodealBannerViewDecorator.swift */; };
 		AC94AB482458996E0057AD3F /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB472458996E0057AD3F /* BannerView.swift */; };
-		AC94AB492458A1040057AD3F /* MockAdsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB3F245877140057AD3F /* MockAdsMediator.swift */; };
-		AC94AB4A2458A1040057AD3F /* AdsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C11245874BF00D590B3 /* AdsConfig.swift */; };
-		AC94AB4B2458A1040057AD3F /* AdsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C12245874BF00D590B3 /* AdsMediator.swift */; };
-		AC94AB4C2458A1040057AD3F /* AdsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C09245874BE00D590B3 /* AdsService.swift */; };
-		AC94AB4D2458A1040057AD3F /* AdsTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C13245874BF00D590B3 /* AdsTimer.swift */; };
-		AC94AB4E2458A1040057AD3F /* BannerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB432458933D0057AD3F /* BannerProvider.swift */; };
-		AC94AB4F2458A1040057AD3F /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94AB472458996E0057AD3F /* BannerView.swift */; };
-		AC94AB502458A1040057AD3F /* InterstitialPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0B245874BE00D590B3 /* InterstitialPlacement.swift */; };
-		AC94AB512458A1040057AD3F /* InterstitialProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0C245874BE00D590B3 /* InterstitialProvider.swift */; };
-		AC94AB522458A1040057AD3F /* RewardedVideoPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0E245874BE00D590B3 /* RewardedVideoPlacement.swift */; };
-		AC94AB532458A1040057AD3F /* RewardedVideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC532C0F245874BE00D590B3 /* RewardedVideoProvider.swift */; };
 		F808C8ADCBA46E22047C3B26 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775D141EAE66CC801B3EC730 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC94AB3D245876460057AD3F /* AdsCore.framework in Frameworks */,
 				1D3E40968C2BCCD0B630C794 /* Pods_AppodealMediator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,19 +500,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC94AB4E2458A1040057AD3F /* BannerProvider.swift in Sources */,
-				AC94AB4A2458A1040057AD3F /* AdsConfig.swift in Sources */,
 				AC94AB46245897F90057AD3F /* AppodealBannerViewDecorator.swift in Sources */,
-				AC94AB4C2458A1040057AD3F /* AdsService.swift in Sources */,
-				AC94AB4B2458A1040057AD3F /* AdsMediator.swift in Sources */,
-				AC94AB4F2458A1040057AD3F /* BannerView.swift in Sources */,
-				AC94AB532458A1040057AD3F /* RewardedVideoProvider.swift in Sources */,
-				AC94AB4D2458A1040057AD3F /* AdsTimer.swift in Sources */,
-				AC94AB502458A1040057AD3F /* InterstitialPlacement.swift in Sources */,
 				AC532C08245874AD00D590B3 /* AppodealMediator.swift in Sources */,
-				AC94AB522458A1040057AD3F /* RewardedVideoPlacement.swift in Sources */,
-				AC94AB512458A1040057AD3F /* InterstitialProvider.swift in Sources */,
-				AC94AB492458A1040057AD3F /* MockAdsMediator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,7 +743,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AppodealMediator/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -799,7 +775,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AppodealMediator/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
