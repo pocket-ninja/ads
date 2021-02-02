@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-    s.name = 'Ads'
-    s.module_name = 'Ads'
+    s.name = 'PocketAdsMediator'
+    s.module_name = 'PocketAdsMediator'
     s.version = '1.0.1'
     s.summary = 'Pocket Ninja Ads'
     s.description = 'Pocket Ninja Ads'
@@ -16,12 +16,12 @@ Pod::Spec.new do |s|
     s.default_subspec = 'Core'
 
     s.subspec 'Core' do |core|
-      core.source_files = 'AdsCore/Sources/**/*.{h,m,swift}'
+      c.dependency 'PocketAds'
     end
 
     s.subspec 'AppodealMediator' do |appodeal|
       appodeal.source_files = 'AppodealMediator/Sources/**/*.{h,m,swift}'
-      appodeal.dependency 'Ads/Core'
+      appodeal.dependency 'PocketAds'
       appodeal.dependency 'Appodeal', '>= 2.8.1'
     end
 
