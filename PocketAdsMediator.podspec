@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name = 'PocketAdsMediator'
-    s.version = '1.2.2'
+    s.version = '1.2.3'
     s.summary = 'Pocket Ninja Ads'
     s.description = 'Pocket Ninja Ads'
     s.homepage = 'https://github.com/pocket-ninja/ads'
