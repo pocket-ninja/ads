@@ -7,8 +7,7 @@ def appodeal
 end
 
 target 'Demo' do
-    pod 'Ads/Core', :path => './Ads.podspec'
-#    pod 'Ads/AppodealAdapters', :path => './Ads.podspec'
+    pod 'PocketAds', :path => './PocketAds.podspec'
 end
 
 target 'AdsCore' do

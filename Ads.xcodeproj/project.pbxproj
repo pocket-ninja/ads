@@ -70,7 +70,6 @@
 		AC94AB39245875CC0057AD3F /* AppodealMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppodealMediator.h; sourceTree = "<group>"; };
 		AC94AB3A245875CC0057AD3F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC94AB3F245877140057AD3F /* MockAdsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdsMediator.swift; sourceTree = "<group>"; };
-		AC94AB41245878D10057AD3F /* Ads.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ads.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AC94AB432458933D0057AD3F /* BannerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerProvider.swift; sourceTree = "<group>"; };
 		AC94AB45245897F90057AD3F /* AppodealBannerViewDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppodealBannerViewDecorator.swift; sourceTree = "<group>"; };
 		AC94AB472458996E0057AD3F /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
@@ -111,7 +110,6 @@
 		AC532BBE24586EFA00D590B3 = {
 			isa = PBXGroup;
 			children = (
-				AC94AB41245878D10057AD3F /* Ads.podspec */,
 				AC532BC924586EFA00D590B3 /* Demo */,
 				AC532BE62458736700D590B3 /* AdsCore */,
 				AC532BF82458737500D590B3 /* AppodealMediator */,
