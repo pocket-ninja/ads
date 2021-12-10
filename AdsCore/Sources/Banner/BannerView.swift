@@ -13,6 +13,7 @@ public protocol BannerView: UIView {
     var delegate: BannerViewDelegate? { get set }
     var sourceViewController: UIViewController? { get set }
     var placement: String? { get set }
+    var hasSmartSize: Bool { get set }
     var isReady: Bool { get }
     func load()
 }

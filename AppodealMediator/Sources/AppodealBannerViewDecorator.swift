@@ -13,14 +13,31 @@ final class AppodealBannerViewDecorator: UIView, BannerView {
         return bannerView.isReady
     }
 
+    var hasSmartSize: Bool {
+        get {
+            bannerView.usesSmartSizing
+        }
+        set {
+            bannerView.usesSmartSizing = newValue
+        }
+    }
+
     var sourceViewController: UIViewController? {
-        get { return bannerView.rootViewController }
-        set { bannerView.rootViewController = newValue }
+        get {
+            return bannerView.rootViewController
+        }
+        set {
+            bannerView.rootViewController = newValue
+        }
     }
 
     var placement: String? {
-        get { return bannerView.placement }
-        set { bannerView.placement = newValue }
+        get {
+            return bannerView.placement
+        }
+        set {
+            bannerView.placement = newValue
+        }
     }
 
     convenience init(size: CGSize) {
@@ -42,14 +59,17 @@ final class AppodealBannerViewDecorator: UIView, BannerView {
     func load() {
         bannerView.loadAd()
     }
-    
-    override func layoutSubviews() {
-        bannerView.frame = bounds
-    }
 
     private func setup() {
-        bannerView.delegate = self
         addSubview(bannerView)
+        bannerView.delegate = self
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            bannerView.widthAnchor.constraint(equalTo: widthAnchor),
+            bannerView.heightAnchor.constraint(equalTo: heightAnchor),
+            bannerView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            bannerView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
     }
 
     private let bannerView: APDBannerView
