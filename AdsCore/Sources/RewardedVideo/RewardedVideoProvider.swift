@@ -79,15 +79,15 @@ public final class RewardedVideoProvider {
     }
     
     private func load(for placement: RewardedVideoPlacement, then callback: @escaping LoadingCompletion) {
-        load(for: placement.name) { [weak self] success in
-            self?.timer.invalidateLoading()
-            success ? callback(true) : self?.finish(result: .failedToLoad)
-        }
-
         timer.limitedLoad(allowedTime: placement.allowedLoadingTime) { [weak self] in
             if self?.cancel(result: .timeout) == true {
                 callback(false)
             }
+        }
+        
+        load(for: placement.name) { [weak self] success in
+            self?.timer.invalidateLoading()
+            success ? callback(true) : self?.finish(result: .failedToLoad)
         }
     }
 
