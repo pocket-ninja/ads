@@ -84,7 +84,7 @@ public final class RewardedVideoProvider {
                 callback(false)
             }
         }
-        
+
         load(for: placement.name) { [weak self] success in
             self?.timer.invalidateLoading()
             success ? callback(true) : self?.finish(result: .failedToLoad)

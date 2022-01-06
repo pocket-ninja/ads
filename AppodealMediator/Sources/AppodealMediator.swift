@@ -90,6 +90,12 @@ extension AppodealMediator: AppodealInterstitialDelegate {
         }
     }
 
+    public func interstitialDidFailToPresent() {
+        DispatchQueue.main.async {
+            self.interstitialDelegate?.interstitialFailedToPresent()
+        }
+    }
+
     public func interstitialWillPresent() {
         DispatchQueue.main.async {
             self.interstitialDelegate?.interstitialWillPresent()

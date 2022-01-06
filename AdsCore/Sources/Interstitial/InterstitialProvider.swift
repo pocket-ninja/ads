@@ -180,6 +180,15 @@ extension InterstitialProvider: AdsMediatorInterstitialDelegate {
         }
     }
     
+    public func interstitialFailedToPresent() {
+        log("interstitial failed to present")
+        
+        if case .loading = state {
+            state = .unknown
+            finish(result: .failedToPresent)
+        }
+    }
+    
     public func interstitialWillPresent() {
         log("interstitial will present")
         state = .presented

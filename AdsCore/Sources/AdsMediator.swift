@@ -7,6 +7,7 @@ import UIKit
 public protocol AdsMediatorInterstitialDelegate: AnyObject {
     func interstitialLoaded(isPrecached: Bool)
     func interstitialFailedToLoad()
+    func interstitialFailedToPresent()
     func interstitialWillPresent()
     func interstitialDismissed()
     func interstitialDidClick()
