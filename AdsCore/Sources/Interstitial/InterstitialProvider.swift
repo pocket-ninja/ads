@@ -14,6 +14,7 @@ public final class InterstitialProvider {
     
     public enum Result: String, Equatable {
         case failedToLoad
+        case failedToPresent
         case cancelled
         case timeout
         case watched
@@ -95,6 +96,8 @@ public final class InterstitialProvider {
     private func showLoadedInterstitial(for placement: String, from controller: UIViewController) {
         if canProvide(), mediator.canShowInterstitial(for: placement) {
             mediator.showInterstitial(from: controller, for: placement)
+        } else {
+            finish(result: .failedToPresent)
         }
     }
     
