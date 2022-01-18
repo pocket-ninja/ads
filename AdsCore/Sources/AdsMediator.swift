@@ -26,7 +26,6 @@ public protocol AdsMediatorRewardedVideoDelegate: AnyObject {
 public protocol AdsInterstitialMediator {
     var interstitialDelegate: AdsMediatorInterstitialDelegate? { get set }
     func isReadyToShowInterstitial(for placement: String) -> Bool
-    func canShowInterstitial(for placement: String) -> Bool
     func showInterstitial(from controller: UIViewController, for placement: String)
     func loadInterstitial(for placement: String)
 }
@@ -34,7 +33,6 @@ public protocol AdsInterstitialMediator {
 public protocol AdsRewardedVideoMediator {
     var rewardedVideoDelegate: AdsMediatorRewardedVideoDelegate? { get set }
     func isReadyToShowRewardedVideo(for placement: String) -> Bool
-    func canShowRewardedVideo(for placement: String) -> Bool
     func showRewardedVideo(from controller: UIViewController, for placement: String)
     func loadRewardedVideo(for placement: String)
 }

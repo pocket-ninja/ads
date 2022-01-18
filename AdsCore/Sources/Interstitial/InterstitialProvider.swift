@@ -94,7 +94,7 @@ public final class InterstitialProvider {
     }
     
     private func showLoadedInterstitial(for placement: String, from controller: UIViewController) {
-        if canProvide(), mediator.canShowInterstitial(for: placement) {
+        if canProvide() {
             mediator.showInterstitial(from: controller, for: placement)
         } else {
             finish(result: .failedToPresent)

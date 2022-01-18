@@ -46,10 +46,6 @@ public final class AppodealMediator: NSObject, AdsMediator {
         return Appodeal.isReadyForShow(with: .interstitial)
     }
 
-    public func canShowInterstitial(for placement: String) -> Bool {
-        return Appodeal.canShow(.interstitial, forPlacement: placement)
-    }
-
     public func showInterstitial(from controller: UIViewController, for placement: String) {
         Appodeal.showAd(.interstitial, forPlacement: placement, rootViewController: controller)
     }
@@ -60,10 +56,6 @@ public final class AppodealMediator: NSObject, AdsMediator {
 
     public func isReadyToShowRewardedVideo(for placement: String) -> Bool {
         return Appodeal.isReadyForShow(with: .rewardedVideo)
-    }
-
-    public func canShowRewardedVideo(for placement: String) -> Bool {
-        return Appodeal.canShow(.rewardedVideo, forPlacement: placement)
     }
 
     public func showRewardedVideo(from controller: UIViewController, for placement: String) {
