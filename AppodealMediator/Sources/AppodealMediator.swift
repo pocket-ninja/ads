@@ -14,7 +14,7 @@ public final class AppodealMediator: NSObject, AdsMediator {
         return UIDevice.current.userInterfaceIdiom == .phone ? kAppodealUnitSize_320x50 : kAppodealUnitSize_728x90
     }
     
-    public init(apiKey: String) {
+    public init(apiKey: @escaping () -> String) {
         self.apiKey = apiKey
         super.init()
     }
@@ -29,7 +29,7 @@ public final class AppodealMediator: NSObject, AdsMediator {
         Appodeal.setLogLevel(config.isVerbose ? .verbose : .warning)
         Appodeal.setAutocache(false, types: config.adTypes.appodeal)
         Appodeal.setAutocache(true, types: config.autocachedTypes.appodeal)
-        Appodeal.initialize(withApiKey: apiKey, types: config.adTypes.appodeal, hasConsent: true)
+        Appodeal.initialize(withApiKey: apiKey(), types: config.adTypes.appodeal, hasConsent: true)
         Appodeal.setInterstitialDelegate(self)
         Appodeal.setRewardedVideoDelegate(self)
         return true
@@ -66,7 +66,7 @@ public final class AppodealMediator: NSObject, AdsMediator {
         Appodeal.cacheAd(.rewardedVideo)
     }
 
-    private let apiKey: String
+    private let apiKey: () -> String
 }
 
 extension AppodealMediator: AppodealInterstitialDelegate {
