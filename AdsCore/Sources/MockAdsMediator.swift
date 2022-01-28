@@ -26,10 +26,11 @@ public class MockAdsMediator: AdsMediator {
         return true
     }
 
-    public func showRewardedVideo(from controller: UIViewController, for placement: String) {
+    public func showRewardedVideo(from controller: UIViewController, for placement: String) -> Bool {
         rewardedVideoDelegate?.rewardedVideoPresented()
         rewardedVideoDelegate?.rewardedVideoWillDismiss()
         rewardedVideoDelegate?.rewardedVideoWatched()
+        return true
     }
 
     public func loadRewardedVideo(for placement: String) {
@@ -40,13 +41,10 @@ public class MockAdsMediator: AdsMediator {
         return true
     }
 
-    public func canShowInterstitial(for placement: String) -> Bool {
-        return true
-    }
-
-    public func showInterstitial(from controller: UIViewController, for placement: String) {
+    public func showInterstitial(from controller: UIViewController, for placement: String)  -> Bool {
         interstitialDelegate?.interstitialWillPresent()
         interstitialDelegate?.interstitialDismissed()
+        return true
     }
 
     public func loadInterstitial(for placement: String) {
