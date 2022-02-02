@@ -36,6 +36,6 @@ Pod::Spec.new do |s|
       appodeal.dependency 'APDOguryAdapter', '>= 2.11.1.1' 
       appodeal.dependency 'APDUnityAdapter', '>= 2.11.1.1' 
       appodeal.dependency 'APDVungleAdapter', '>= 2.11.1.1'
-      appodeal.dependency 'APDYandexAdapter', '>= 2.11.1.1'
+      # appodeal.dependency 'APDYandexAdapter', '>= 2.11.1.1'
     end
   end
