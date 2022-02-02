@@ -21,21 +21,21 @@ Pod::Spec.new do |s|
     s.subspec 'AppodealMediator' do |appodeal|
       appodeal.source_files = 'AppodealMediator/Sources/**/*.{h,m,swift}'
       appodeal.dependency 'PocketAds'
-      appodeal.dependency 'Appodeal', '>= 2.11.0'
+      appodeal.dependency 'Appodeal', '>= 2.11.1'
     end
 
     s.subspec 'AppodealAdapters' do |appodeal|
-      appodeal.dependency 'APDAdColonyAdapter', '>= 2.11.0.1' 
-      appodeal.dependency 'APDAmazonAdsAdapter', '>= 2.11.0.1' 
-      appodeal.dependency 'APDAppLovinAdapter', '>= 2.11.0.1' 
-      appodeal.dependency 'APDBidMachineAdapter', '>= 2.11.0.1' 
-      appodeal.dependency 'APDFacebookAudienceAdapter', '>= 2.11.0.1' 
-      appodeal.dependency 'APDGoogleAdMobAdapter', '>= 2.11.0.1' 
-      appodeal.dependency 'APDIronSourceAdapter', '>= 2.11.0.1' 
-      appodeal.dependency 'APDMyTargetAdapter', '>= 2.11.0.1' 
-      appodeal.dependency 'APDOguryAdapter', '>= 2.11.0.1' 
-      appodeal.dependency 'APDUnityAdapter', '>= 2.11.0.1' 
-      appodeal.dependency 'APDVungleAdapter', '>= 2.11.0.1'
-
+      appodeal.dependency 'APDAdColonyAdapter', '>= 2.11.1.1' 
+      appodeal.dependency 'APDAmazonAdsAdapter', '>= 2.11.1.1' 
+      appodeal.dependency 'APDAppLovinAdapter', '>= 2.11.1.1' 
+      appodeal.dependency 'APDBidMachineAdapter', '>= 2.11.1.1' 
+      appodeal.dependency 'APDFacebookAudienceAdapter', '>= 2.11.1.1' 
+      appodeal.dependency 'APDGoogleAdMobAdapter', '>= 2.11.1.1' 
+      appodeal.dependency 'APDIronSourceAdapter', '>= 2.11.1.1' 
+      appodeal.dependency 'APDMyTargetAdapter', '>= 2.11.1.1' 
+      appodeal.dependency 'APDOguryAdapter', '>= 2.11.1.1' 
+      appodeal.dependency 'APDUnityAdapter', '>= 2.11.1.1' 
+      appodeal.dependency 'APDVungleAdapter', '>= 2.11.1.1'
+      appodeal.dependency 'APDYandexAdapter', '>= 2.11.1.1'
     end
   end
