@@ -44,7 +44,7 @@ public final class InterstitialProvider {
     
     public func preload(for placement: InterstitialPlacement) {
         if isEnabled, state == .unknown {
-            mediator.loadInterstitial(for: placement.name)
+            mediator.loadInterstitial(for: placement.id)
         }
     }
     
@@ -86,7 +86,7 @@ public final class InterstitialProvider {
         
         load(for: placement) { [weak self, weak controller] success in
             if success, let controller = controller {
-                self?.showLoadedInterstitial(for: placement.name, from: controller)
+                self?.showLoadedInterstitial(for: placement.id, from: controller)
             }
         }
 
@@ -110,7 +110,7 @@ public final class InterstitialProvider {
             }
         }
 
-        load(for: placement.name) { [weak self] success in
+        load(for: placement.id) { [weak self] success in
             self?.timer.invalidateLoading()
             success ? callback(true) : self?.finish(result: .failedToLoad)
         }

@@ -42,7 +42,7 @@ public final class RewardedVideoProvider {
     
     public func preload(for placement: RewardedVideoPlacement) {
         if isEnabled, state == .unknown {
-            mediator.loadRewardedVideo(for: placement.name)
+            mediator.loadRewardedVideo(for: placement.id)
         }
     }
     
@@ -61,7 +61,7 @@ public final class RewardedVideoProvider {
         
         load(for: placement) { [weak self, weak controller] success in
             if success, let controller = controller {
-                self?.showLoadedVideo(for: placement.name, from: controller)
+                self?.showLoadedVideo(for: placement.id, from: controller)
             }
         }
         
@@ -85,7 +85,7 @@ public final class RewardedVideoProvider {
             }
         }
 
-        load(for: placement.name) { [weak self] success in
+        load(for: placement.id) { [weak self] success in
             self?.timer.invalidateLoading()
             success ? callback(true) : self?.finish(result: .failedToLoad)
         }
