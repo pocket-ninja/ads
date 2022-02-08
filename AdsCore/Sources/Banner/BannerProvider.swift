@@ -23,7 +23,8 @@ public final class BannerProvider {
     @discardableResult
     public func load(for placement: String, in controller: UIViewController) -> BannerView? {
 
-        let banner = bannerView ?? mediator.loadBanner(for: placement)
+        let banner = bannerView ?? mediator.loadBanner()
+        banner.placement = placement
         banner.sourceViewController = controller
         if isEnabled {
             banner.load()

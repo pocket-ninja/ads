@@ -5,7 +5,6 @@
 import UIKit
 
 public class MockAdsMediator: AdsMediator {
-    
     weak public var rewardedVideoDelegate: AdsMediatorRewardedVideoDelegate?
     weak public var interstitialDelegate: AdsMediatorInterstitialDelegate?
     
@@ -52,13 +51,16 @@ public class MockAdsMediator: AdsMediator {
         interstitialDelegate?.interstitialLoaded(isPrecached: false)
     }
     
-    public func loadBanner(for placement: String) -> BannerView {
-        return MockBannerView()
+    public func loadBanner() -> BannerView {
+        MockBannerView()
     }
 }
 
 private final class MockBannerView: UIView, BannerView {
     var delegate: BannerViewDelegate?
+    var placement: String?
     var sourceViewController: UIViewController?
     func load() {}
+    func startAutoRefresh() {}
+    func stopAutoRefresh() {}
 }

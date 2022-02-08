@@ -12,5 +12,8 @@ public protocol BannerViewDelegate: AnyObject {
 public protocol BannerView: UIView {
     var delegate: BannerViewDelegate? { get set }
     var sourceViewController: UIViewController? { get set }
+    var placement: String? { get set }
     func load()
+    func startAutoRefresh()
+    func stopAutoRefresh()
 }

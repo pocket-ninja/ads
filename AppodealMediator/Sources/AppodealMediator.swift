@@ -35,8 +35,8 @@ public final class AppodealMediator: NSObject, AdsMediator {
         completion(true)
     }
     
-    public func loadBanner(for placement: String) -> BannerView {
-        AppodealBannerViewDecorator(size: bannerSize, placement: "default")
+    public func loadBanner() -> BannerView {
+        AppodealBannerViewDecorator(size: bannerSize)
     }
 
     public func isReadyToShowInterstitial(for placement: String) -> Bool {

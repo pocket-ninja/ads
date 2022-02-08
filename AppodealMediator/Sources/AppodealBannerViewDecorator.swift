@@ -17,11 +17,19 @@ final class AppodealBannerViewDecorator: UIView, BannerView {
             bannerView.rootViewController = newValue
         }
     }
+    
+    var placement: String? {
+        get {
+            bannerView.placement
+        }
+        set {
+            bannerView.placement = newValue
+        }
+    }
 
-    convenience init(size: CGSize, placement: String) {
+    convenience init(size: CGSize) {
         let bannerView = AppodealBannerView(size: size)
         bannerView.usesSmartSizing = true
-        bannerView.placement = placement
         self.init(bannerView: bannerView)
     }
 
@@ -32,12 +40,15 @@ final class AppodealBannerViewDecorator: UIView, BannerView {
     }
 
     required convenience init?(coder aDecoder: NSCoder) {
-        self.init(size: .zero, placement: "")
+        self.init(size: .zero)
     }
 
     func load() {
         bannerView.loadAd()
     }
+    
+    func startAutoRefresh() {}
+    func stopAutoRefresh() {}
 
     private func setup() {
         addSubview(bannerView)
