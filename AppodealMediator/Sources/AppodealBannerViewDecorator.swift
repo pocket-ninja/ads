@@ -9,19 +9,6 @@ import PocketAds
 final class AppodealBannerViewDecorator: UIView, BannerView {
     weak var delegate: BannerViewDelegate?
 
-    var isReady: Bool {
-        return bannerView.isReady
-    }
-
-    var hasSmartSize: Bool {
-        get {
-            bannerView.usesSmartSizing
-        }
-        set {
-            bannerView.usesSmartSizing = newValue
-        }
-    }
-
     var sourceViewController: UIViewController? {
         get {
             return bannerView.rootViewController
@@ -31,18 +18,10 @@ final class AppodealBannerViewDecorator: UIView, BannerView {
         }
     }
 
-    var placement: String? {
-        get {
-            return bannerView.placement
-        }
-        set {
-            bannerView.placement = newValue
-        }
-    }
-
-    convenience init(size: CGSize) {
+    convenience init(size: CGSize, placement: String) {
         let bannerView = AppodealBannerView(size: size)
         bannerView.usesSmartSizing = true
+        bannerView.placement = placement
         self.init(bannerView: bannerView)
     }
 
@@ -53,7 +32,7 @@ final class AppodealBannerViewDecorator: UIView, BannerView {
     }
 
     required convenience init?(coder aDecoder: NSCoder) {
-        self.init(size: .zero)
+        self.init(size: .zero, placement: "")
     }
 
     func load() {
@@ -81,6 +60,6 @@ extension AppodealBannerViewDecorator: AppodealBannerViewDelegate {
     }
 
     public func bannerView(_ bannerView: APDBannerView, didFailToLoadAdWithError error: Error) {
-        delegate?.bannerView(self, failedToLoadWithError: error)
+        delegate?.bannerView(self, failedToLoadWithError: error.localizedDescription)
     }
 }

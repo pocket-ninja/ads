@@ -52,7 +52,13 @@ public class MockAdsMediator: AdsMediator {
         interstitialDelegate?.interstitialLoaded(isPrecached: false)
     }
     
-    public func loadBanner(in controller: UIViewController, for placement: String?) -> BannerView? {
-        return nil
+    public func loadBanner(for placement: String) -> BannerView {
+        return MockBannerView()
     }
+}
+
+private final class MockBannerView: UIView, BannerView {
+    var delegate: BannerViewDelegate?
+    var sourceViewController: UIViewController?
+    func load() {}
 }
