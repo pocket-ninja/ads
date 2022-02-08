@@ -8,14 +8,15 @@ public class MockAdsMediator: AdsMediator {
     
     weak public var rewardedVideoDelegate: AdsMediatorRewardedVideoDelegate?
     weak public var interstitialDelegate: AdsMediatorInterstitialDelegate?
-
+    
     public var bannerSize: CGSize {
         return CGSize(width: 320, height: 50)
     }
+    
+    public init() {}
 
-    @discardableResult
-    public func initialize(config: AdsConfig) -> Bool {
-        return true
+    public func initialize(config: AdsConfig, then completion: @escaping (Bool) -> Void) {
+        completion(true)
     }
 
     public func isReadyToShowRewardedVideo(for placement: String) -> Bool {

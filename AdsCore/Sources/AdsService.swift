@@ -26,8 +26,8 @@ public final class AdsService {
         self.banner = BannerProvider(mediator: mediator)
     }
     
-    public func initialize() {
-        mediator.initialize(config: config)
+    public func initialize(then completion: @escaping (Bool) -> Void = { _ in}) {
+        mediator.initialize(config: config, then: completion)
         interstitial.setup()
         rewardedVideo.setup()
         

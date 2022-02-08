@@ -19,10 +19,10 @@ public final class AppodealMediator: NSObject, AdsMediator {
         super.init()
     }
 
-    @discardableResult
-    public func initialize(config: AdsConfig) -> Bool {
+    public func initialize(config: AdsConfig, then completion: @escaping (Bool) -> Void) {
         guard !Appodeal.isInitalized(for: config.adTypes.appodeal) else {
-            return false
+            completion(false)
+            return
         }
 
         Appodeal.setTestingEnabled(config.isTesting)
@@ -32,7 +32,7 @@ public final class AppodealMediator: NSObject, AdsMediator {
         Appodeal.initialize(withApiKey: apiKey(), types: config.adTypes.appodeal, hasConsent: true)
         Appodeal.setInterstitialDelegate(self)
         Appodeal.setRewardedVideoDelegate(self)
-        return true
+        completion(true)
     }
     
     public func loadBanner(in controller: UIViewController, for placement: String?) -> BannerView? {

@@ -43,6 +43,5 @@ public protocol AdsBannerMediator {
 }
 
 public protocol AdsMediator: AdsRewardedVideoMediator, AdsInterstitialMediator, AdsBannerMediator {
-    @discardableResult
-    func initialize(config: AdsConfig) -> Bool
+    func initialize(config: AdsConfig, then completion: @escaping (Bool) -> Void)
 }
