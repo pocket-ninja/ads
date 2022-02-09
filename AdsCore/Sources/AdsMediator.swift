@@ -16,7 +16,7 @@ public protocol AdsMediatorInterstitialDelegate: AnyObject {
 public protocol AdsMediatorRewardedVideoDelegate: AnyObject {
     func rewardedVideoLoaded()
     func rewardedVideoFailedToLoad()
-    func rewardedVideoWillDismiss()
+    func rewardedVideoDismissed()
     func rewardedVideoWatched()
     func rewardedVideoFailedToPresent()
     func rewardedVideoPresented()

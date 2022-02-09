@@ -28,8 +28,8 @@ public class MockAdsMediator: AdsMediator {
 
     public func showRewardedVideo(from controller: UIViewController, for placement: String) -> Bool {
         rewardedVideoDelegate?.rewardedVideoPresented()
-        rewardedVideoDelegate?.rewardedVideoWillDismiss()
         rewardedVideoDelegate?.rewardedVideoWatched()
+        rewardedVideoDelegate?.rewardedVideoDismissed()
         return true
     }
 

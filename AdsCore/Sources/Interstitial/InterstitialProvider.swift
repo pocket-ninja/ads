@@ -192,7 +192,7 @@ extension InterstitialProvider: AdsMediatorInterstitialDelegate {
     }
     
     public func interstitialPresented() {
-        log("interstitial will present")
+        log("interstitial presented")
         state = .presented
     }
     

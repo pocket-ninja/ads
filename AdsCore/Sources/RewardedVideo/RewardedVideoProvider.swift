@@ -168,8 +168,8 @@ extension RewardedVideoProvider: AdsMediatorRewardedVideoDelegate {
         }
     }
     
-    public func rewardedVideoWillDismiss() {
-        log("rewarded video will dismiss")
+    public func rewardedVideoDismissed() {
+        log("rewarded video dismissed")
         
         if case let .presented(isWatched) = state {
             finish(result: isWatched ? .watched : .closed)

@@ -131,7 +131,7 @@ extension AppodealMediator: AppodealRewardedVideoDelegate {
 
     public func rewardedVideoWillDismissAndWasFullyWatched(_ wasFullyWatched: Bool) {
         DispatchQueue.main.async {
-            self.rewardedVideoDelegate?.rewardedVideoWillDismiss()
+            self.rewardedVideoDelegate?.rewardedVideoDismissed()
         }
     }
 
