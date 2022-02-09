@@ -5,11 +5,11 @@
 import UIKit
 
 public struct RewardedVideoPlacement {
-    public var id: String
+    public var name: String
     public var allowedLoadingTime: TimeInterval
     
-    public init(id: String, allowedLoadingTime: TimeInterval) {
-        self.id = id
+    public init(name: String, allowedLoadingTime: TimeInterval) {
+        self.name = name
         self.allowedLoadingTime = allowedLoadingTime
     }
 }

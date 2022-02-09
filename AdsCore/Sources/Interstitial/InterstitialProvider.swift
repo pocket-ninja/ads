@@ -8,7 +8,7 @@ public final class InterstitialProvider {
     public enum State: Equatable {
         case unknown
         case loading
-        case loaded(precached: Bool)
+        case loaded
         case presented
     }
     
@@ -42,9 +42,9 @@ public final class InterstitialProvider {
         timer.invalidate()
     }
     
-    public func preload(for placement: InterstitialPlacement) {
+    public func preload() {
         if isEnabled, state == .unknown {
-            mediator.loadInterstitial(for: placement.id)
+            mediator.loadInterstitial()
         }
     }
     
@@ -86,7 +86,7 @@ public final class InterstitialProvider {
         
         load(for: placement) { [weak self, weak controller] success in
             if success, let controller = controller {
-                self?.showLoadedInterstitial(for: placement.id, from: controller)
+                self?.showLoadedInterstitial(for: placement.name, from: controller)
             }
         }
 
@@ -110,21 +110,21 @@ public final class InterstitialProvider {
             }
         }
 
-        load(for: placement.id) { [weak self] success in
+        load() { [weak self] success in
             self?.timer.invalidateLoading()
             success ? callback(true) : self?.finish(result: .failedToLoad)
         }
     }
 
-    private func load(for placement: String, then callback: @escaping LoadingCompletion) {
-        if mediator.isReadyToShowInterstitial(for: placement) {
+    private func load(then callback: @escaping LoadingCompletion) {
+        if mediator.isReadyToShowInterstitial() {
             callback(true)
             return
         }
 
         state = .loading
         loadingCompletion = callback
-        mediator.loadInterstitial(for: placement)
+        mediator.loadInterstitial()
     }
     
     @discardableResult
@@ -164,11 +164,11 @@ public final class InterstitialProvider {
 }
 
 extension InterstitialProvider: AdsMediatorInterstitialDelegate {
-    public func interstitialLoaded(isPrecached: Bool) {
-        log("interstitial did load, is precached: \(isPrecached)")
+    public func interstitialLoaded() {
+        log("interstitial did load, is precached")
         
         if case .loading = state {
-            state = .loaded(precached: isPrecached)
+            state = .loaded
             finishLoading(success: true)
         }
     }
@@ -191,7 +191,7 @@ extension InterstitialProvider: AdsMediatorInterstitialDelegate {
         }
     }
     
-    public func interstitialWillPresent() {
+    public func interstitialPresented() {
         log("interstitial will present")
         state = .presented
     }

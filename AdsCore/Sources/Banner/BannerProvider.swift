@@ -5,8 +5,6 @@
 import UIKit
 
 public final class BannerProvider {
-    public var isEnabled: Bool = false
-
     public var bannerSize: CGSize {
         return mediator.bannerSize
     }
@@ -25,9 +23,7 @@ public final class BannerProvider {
         let banner = mediator.loadBanner()
         banner.placement = placement
         banner.sourceViewController = controller
-        if isEnabled {
-            banner.load()
-        }
+        banner.load()
 
         bannerView = banner
         return banner

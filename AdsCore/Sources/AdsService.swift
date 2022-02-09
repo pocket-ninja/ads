@@ -14,7 +14,6 @@ public final class AdsService {
         didSet {
             interstitial.isEnabled = isEnabled
             rewardedVideo.isEnabled = isEnabled
-            banner.isEnabled = isEnabled
         }
     }
         

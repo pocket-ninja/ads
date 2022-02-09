@@ -4,17 +4,17 @@
 
 import UIKit
 
-public struct InterstitialPlacement: Identifiable {
-    public var id: String
+public struct InterstitialPlacement {
+    public var name: String
     public var allowedLoadingTime: TimeInterval
     public var isEnabled: Bool
 
     public init(
-        id: String,
+        name: String,
         allowedLoadingTime: TimeInterval = 5.0,
         isEnabled: Bool = true
     ) {
-        self.id = id
+        self.name = name
         self.allowedLoadingTime = allowedLoadingTime
         self.isEnabled = isEnabled
     }

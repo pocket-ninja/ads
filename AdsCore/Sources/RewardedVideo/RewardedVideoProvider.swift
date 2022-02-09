@@ -40,9 +40,9 @@ public final class RewardedVideoProvider {
         return cancel(result: .cancelled)
     }
     
-    public func preload(for placement: RewardedVideoPlacement) {
+    public func preload() {
         if isEnabled, state == .unknown {
-            mediator.loadRewardedVideo(for: placement.id)
+            mediator.loadRewardedVideo()
         }
     }
     
@@ -61,7 +61,7 @@ public final class RewardedVideoProvider {
         
         load(for: placement) { [weak self, weak controller] success in
             if success, let controller = controller {
-                self?.showLoadedVideo(for: placement.id, from: controller)
+                self?.showLoadedVideo(for: placement.name, from: controller)
             }
         }
         
@@ -85,21 +85,21 @@ public final class RewardedVideoProvider {
             }
         }
 
-        load(for: placement.id) { [weak self] success in
+        load() { [weak self] success in
             self?.timer.invalidateLoading()
             success ? callback(true) : self?.finish(result: .failedToLoad)
         }
     }
 
-    private func load(for placement: String, then callback: @escaping LoadingCompletion) {
-        if mediator.isReadyToShowRewardedVideo(for: placement) {
+    private func load(then callback: @escaping LoadingCompletion) {
+        if mediator.isReadyToShowRewardedVideo() {
             callback(true)
             return
         }
 
         state = .loading
         loadingCompletion = callback
-        mediator.loadRewardedVideo(for: placement)
+        mediator.loadRewardedVideo()
     }
     
     private func canPresent() -> Bool {

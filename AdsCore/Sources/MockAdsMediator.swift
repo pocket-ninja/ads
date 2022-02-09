@@ -18,11 +18,11 @@ public class MockAdsMediator: AdsMediator {
         completion(true)
     }
 
-    public func isReadyToShowRewardedVideo(for placement: String) -> Bool {
+    public func isReadyToShowRewardedVideo() -> Bool {
         return true
     }
 
-    public func canShowRewardedVideo(for placement: String) -> Bool {
+    public func canShowRewardedVideo() -> Bool {
         return true
     }
 
@@ -33,22 +33,22 @@ public class MockAdsMediator: AdsMediator {
         return true
     }
 
-    public func loadRewardedVideo(for placement: String) {
+    public func loadRewardedVideo() {
         rewardedVideoDelegate?.rewardedVideoLoaded()
     }
 
-    public func isReadyToShowInterstitial(for placement: String) -> Bool {
+    public func isReadyToShowInterstitial() -> Bool {
         return true
     }
 
     public func showInterstitial(from controller: UIViewController, for placement: String)  -> Bool {
-        interstitialDelegate?.interstitialWillPresent()
+        interstitialDelegate?.interstitialPresented()
         interstitialDelegate?.interstitialDismissed()
         return true
     }
 
-    public func loadInterstitial(for placement: String) {
-        interstitialDelegate?.interstitialLoaded(isPrecached: false)
+    public func loadInterstitial() {
+        interstitialDelegate?.interstitialLoaded()
     }
     
     public func loadBanner() -> BannerView {

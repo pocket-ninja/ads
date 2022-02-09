@@ -39,7 +39,7 @@ public final class AppodealMediator: NSObject, AdsMediator {
         AppodealBannerViewDecorator(size: bannerSize)
     }
 
-    public func isReadyToShowInterstitial(for placement: String) -> Bool {
+    public func isReadyToShowInterstitial() -> Bool {
         return Appodeal.isReadyForShow(with: .interstitial)
     }
 
@@ -47,11 +47,11 @@ public final class AppodealMediator: NSObject, AdsMediator {
         Appodeal.showAd(.interstitial, forPlacement: placement, rootViewController: controller)
     }
 
-    public func loadInterstitial(for placement: String) {
+    public func loadInterstitial() {
         Appodeal.cacheAd(.interstitial)
     }
 
-    public func isReadyToShowRewardedVideo(for placement: String) -> Bool {
+    public func isReadyToShowRewardedVideo() -> Bool {
         return Appodeal.isReadyForShow(with: .rewardedVideo)
     }
 
@@ -59,7 +59,7 @@ public final class AppodealMediator: NSObject, AdsMediator {
         Appodeal.showAd(.rewardedVideo, forPlacement: placement, rootViewController: controller)
     }
 
-    public func loadRewardedVideo(for placement: String) {
+    public func loadRewardedVideo() {
         Appodeal.cacheAd(.rewardedVideo)
     }
 
@@ -69,7 +69,7 @@ public final class AppodealMediator: NSObject, AdsMediator {
 extension AppodealMediator: AppodealInterstitialDelegate {
     public func interstitialDidLoadAdIsPrecache(_ precache: Bool) {
         DispatchQueue.main.async {
-            self.interstitialDelegate?.interstitialLoaded(isPrecached: precache)
+            self.interstitialDelegate?.interstitialLoaded()
         }
     }
 
@@ -87,7 +87,7 @@ extension AppodealMediator: AppodealInterstitialDelegate {
 
     public func interstitialWillPresent() {
         DispatchQueue.main.async {
-            self.interstitialDelegate?.interstitialWillPresent()
+            self.interstitialDelegate?.interstitialPresented()
         }
     }
 

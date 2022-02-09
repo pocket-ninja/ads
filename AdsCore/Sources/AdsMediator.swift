@@ -5,10 +5,10 @@
 import UIKit
 
 public protocol AdsMediatorInterstitialDelegate: AnyObject {
-    func interstitialLoaded(isPrecached: Bool)
+    func interstitialLoaded()
     func interstitialFailedToLoad()
     func interstitialFailedToPresent()
-    func interstitialWillPresent()
+    func interstitialPresented()
     func interstitialDismissed()
     func interstitialDidClick()
 }
@@ -25,16 +25,16 @@ public protocol AdsMediatorRewardedVideoDelegate: AnyObject {
 
 public protocol AdsInterstitialMediator {
     var interstitialDelegate: AdsMediatorInterstitialDelegate? { get set }
-    func isReadyToShowInterstitial(for placement: String) -> Bool
+    func isReadyToShowInterstitial() -> Bool
     func showInterstitial(from controller: UIViewController, for placement: String) -> Bool
-    func loadInterstitial(for placement: String)
+    func loadInterstitial()
 }
 
 public protocol AdsRewardedVideoMediator {
     var rewardedVideoDelegate: AdsMediatorRewardedVideoDelegate? { get set }
-    func isReadyToShowRewardedVideo(for placement: String) -> Bool
+    func isReadyToShowRewardedVideo() -> Bool
     func showRewardedVideo(from controller: UIViewController, for placement: String) -> Bool
-    func loadRewardedVideo(for placement: String)
+    func loadRewardedVideo()
 }
 
 public protocol AdsBannerMediator {
