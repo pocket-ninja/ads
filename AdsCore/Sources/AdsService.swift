@@ -29,17 +29,6 @@ public final class AdsService {
         mediator.initialize(config: config, then: completion)
         interstitial.setup()
         rewardedVideo.setup()
-        
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(appDidEnterBackground),
-            name: UIApplication.didEnterBackgroundNotification,
-            object: nil
-        )
-    }
-    
-    @objc private func appDidEnterBackground() {
-        interstitial.invalidate()
     }
     
     private let config: AdsConfig
