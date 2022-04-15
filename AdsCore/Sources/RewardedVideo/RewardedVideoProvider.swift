@@ -68,14 +68,15 @@ public final class RewardedVideoProvider {
         return true
     }
     
-    private func showLoadedVideo(for placement: String, from controller: UIViewController) {
+    @discardableResult
+    private func showLoadedVideo(for placement: String, from controller: UIViewController) -> Bool {
         guard canPresent() else {
             finish(result: .failedToPresent)
-            return
+            return false
         }
         
         state = .presented(isWatched: false)
-        mediator.showRewardedVideo(from: controller, for: placement)
+        return mediator.showRewardedVideo(from: controller, for: placement)
     }
     
     private func load(for placement: RewardedVideoPlacement, then callback: @escaping LoadingCompletion) {

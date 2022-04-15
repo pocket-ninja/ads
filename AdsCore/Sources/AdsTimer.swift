@@ -3,11 +3,10 @@
 //
 
 import UIKit
+import Combine
 
 final class AdsTimer {
-    
-    var onCooldown: Bool = false
-    var cooldowns: Int = 0
+    @Published private(set) var cooldowns: Bool = false
 
     func limitedLoad(allowedTime: TimeInterval, then block: @escaping () -> Void) {
         loadingTimer = Timer(interval: allowedTime) { _ in block() }
@@ -15,21 +14,13 @@ final class AdsTimer {
     }
     
     func cooldown(for duration: TimeInterval) {
-        if onCooldown {
+        if cooldowns {
             return
         }
         
-        cooldowns += 1
-        onCooldown = true
-        cooldownTimer = Timer(interval: duration) { [weak self] _ in self?.onCooldown = false }
+        cooldowns = true
+        cooldownTimer = Timer(interval: duration) { [weak self] _ in self?.cooldowns = false }
         cooldownTimer?.start()
-    }
-    
-    func invalidate() {
-        cooldownTimer?.invalidate()
-        cooldownTimer = nil
-        onCooldown = false
-        cooldowns = 0
     }
     
     func invalidateLoading() {

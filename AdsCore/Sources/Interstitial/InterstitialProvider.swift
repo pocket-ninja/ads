@@ -38,10 +38,6 @@ public final class InterstitialProvider {
         timer.cooldown(for: config.cooldown)
     }
     
-    public func invalidate() {
-        timer.invalidate()
-    }
-    
     public func preload() {
         if isEnabled, state == .unknown {
             mediator.loadInterstitial()
@@ -53,12 +49,7 @@ public final class InterstitialProvider {
             return false
         }
 
-        guard config.interstitialsPerSession > timer.cooldowns else {
-            log("max interstitials count reached")
-            return false
-        }
-
-        guard !timer.onCooldown else {
+        guard !timer.cooldowns else {
             log("interstitial is on cooldown")
             return false
         }

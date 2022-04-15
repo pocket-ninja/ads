@@ -12,7 +12,6 @@ public enum AdType {
 
 public protocol InterstitialConfig {
     var cooldown: TimeInterval { get }
-    var interstitialsPerSession: Int { get }
 }
 
 public protocol AdsConfig: InterstitialConfig {
