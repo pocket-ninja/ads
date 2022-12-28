@@ -20,7 +20,7 @@ public final class AppodealMediator: NSObject, AdsMediator {
     }
 
     public func initialize(config: AdsConfig, then completion: @escaping (Bool) -> Void) {
-        guard !Appodeal.isInitalized(for: config.adTypes.appodeal) else {
+        guard !Appodeal.isInitialized(for: config.adTypes.appodeal) else {
             completion(false)
             return
         }
@@ -29,7 +29,9 @@ public final class AppodealMediator: NSObject, AdsMediator {
         Appodeal.setLogLevel(config.isVerbose ? .verbose : .warning)
         Appodeal.setAutocache(false, types: config.adTypes.appodeal)
         Appodeal.setAutocache(true, types: config.autocachedTypes.appodeal)
-        Appodeal.initialize(withApiKey: apiKey(), types: config.adTypes.appodeal, hasConsent: true)
+        Appodeal.updateUserConsentGDPR(.personalized)
+        Appodeal.updateUserConsentCCPA(.optIn)
+        Appodeal.initialize(withApiKey: apiKey(), types: config.adTypes.appodeal)
         Appodeal.setInterstitialDelegate(self)
         Appodeal.setRewardedVideoDelegate(self)
         completion(true)
