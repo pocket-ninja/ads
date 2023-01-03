@@ -34,8 +34,13 @@ public final class InterstitialProvider {
         mediator.interstitialDelegate = self
     }
     
-    public func cooldown() {
-        timer.cooldown(for: config.cooldown)
+    public func cooldown(for duration: TimeInterval, resets: Bool = true) {
+        timer.cooldown(for: duration, resets: resets)
+    }
+    
+    /** resets: whether to reset current cooldown or not */
+    public func cooldown(resets: Bool = true) {
+        cooldown(for: config.cooldown, resets: resets)
     }
     
     public func preload() {
