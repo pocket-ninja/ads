@@ -10,6 +10,23 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '14.0'
     s.requires_arc = true
     s.static_framework = true
-    s.swift_version = '5.5'
-    s.source_files = 'AdsCore/Sources/**/*.{h,m,swift}'
+    s.swift_version = '5.7'
+    s.default_subspec = 'Core'
+    s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 arm64e armv7 armv7s x86_64' }
+    
+    s.subspec 'Core' do |core|
+      core.source_files = 'AdsCore/Sources/**/*.{h,m,swift}'
+    end
+    
+    s.subspec 'AppodealMediator' do |appodeal|
+      appodeal.source_files = 'AppodealMediator/Sources/**/*.{h,m,swift}'
+      appodeal.dependency 'PocketAds/Core'
+      appodeal.dependency 'Appodeal', '>= 3.0.1'
+    end
+
+    s.subspec 'ApplovinMediator' do |applovin|
+      applovin.source_files = 'ApplovinMediator/Sources/**/*.{h,m,swift}'
+      applovin.dependency 'PocketAds/Core'
+      applovin.dependency 'AppLovinSDK'
+    end
   end

@@ -1,4 +1,5 @@
 PODS:
+  - AppLovinSDK (11.6.1)
   - Appodeal (3.0.1):
     - Protobuf
     - StackConsentManager (~> 1.2.0)
@@ -6,49 +7,49 @@ PODS:
     - StackModules (~> 1.3.0)
     - StackProtobuf (~> 0.8.0)
   - OMSDK_Appodeal (1.3.37)
-  - PocketAds (1.2.21)
-  - Protobuf (3.21.9)
+  - PocketAds/Core (1.3.1)
+  - Protobuf (3.21.12)
   - StackConsentManager (1.2.2)
-  - StackIAB (1.8.4):
-    - StackIAB/StackIABAssets (= 1.8.4)
-    - StackIAB/StackMRAIDKit (= 1.8.4)
-    - StackIAB/StackNASTKit (= 1.8.4)
-    - StackIAB/StackOpenMeasure (= 1.8.4)
-    - StackIAB/StackRichMedia (= 1.8.4)
-    - StackIAB/StackVASTAssets (= 1.8.4)
-    - StackIAB/StackVASTKit (= 1.8.4)
-    - StackIAB/StackVideoPlayer (= 1.8.4)
-    - StackIAB/StackXML (= 1.8.4)
+  - StackIAB (1.8.5):
+    - StackIAB/StackIABAssets (= 1.8.5)
+    - StackIAB/StackMRAIDKit (= 1.8.5)
+    - StackIAB/StackNASTKit (= 1.8.5)
+    - StackIAB/StackOpenMeasure (= 1.8.5)
+    - StackIAB/StackRichMedia (= 1.8.5)
+    - StackIAB/StackVASTAssets (= 1.8.5)
+    - StackIAB/StackVASTKit (= 1.8.5)
+    - StackIAB/StackVideoPlayer (= 1.8.5)
+    - StackIAB/StackXML (= 1.8.5)
     - StackModules (~> 1.3.0)
-  - StackIAB/StackIABAssets (1.8.4):
+  - StackIAB/StackIABAssets (1.8.5):
     - StackModules (~> 1.3.0)
-  - StackIAB/StackMRAIDKit (1.8.4):
+  - StackIAB/StackMRAIDKit (1.8.5):
     - StackIAB/StackIABAssets
     - StackIAB/StackOpenMeasure
     - StackModules (~> 1.3.0)
-  - StackIAB/StackNASTKit (1.8.4):
+  - StackIAB/StackNASTKit (1.8.5):
     - StackIAB/StackVASTKit
     - StackModules (~> 1.3.0)
-  - StackIAB/StackOpenMeasure (1.8.4):
+  - StackIAB/StackOpenMeasure (1.8.5):
     - OMSDK_Appodeal (~> 1.3.37)
     - StackModules (~> 1.3.0)
-  - StackIAB/StackRichMedia (1.8.4):
+  - StackIAB/StackRichMedia (1.8.5):
     - StackIAB/StackIABAssets
     - StackIAB/StackVASTAssets
     - StackIAB/StackVideoPlayer
     - StackModules (~> 1.3.0)
-  - StackIAB/StackVASTAssets (1.8.4):
+  - StackIAB/StackVASTAssets (1.8.5):
     - StackIAB/StackIABAssets
     - StackIAB/StackXML
     - StackModules (~> 1.3.0)
-  - StackIAB/StackVASTKit (1.8.4):
+  - StackIAB/StackVASTKit (1.8.5):
     - StackIAB/StackMRAIDKit
     - StackIAB/StackVASTAssets
     - StackIAB/StackVideoPlayer
     - StackModules (~> 1.3.0)
-  - StackIAB/StackVideoPlayer (1.8.4):
+  - StackIAB/StackVideoPlayer (1.8.5):
     - StackModules (~> 1.3.0)
-  - StackIAB/StackXML (1.8.4):
+  - StackIAB/StackXML (1.8.5):
     - StackModules (~> 1.3.0)
   - StackModules (1.3.4):
     - StackModules/StackProductPresentation (= 1.3.4)
@@ -61,11 +62,13 @@ PODS:
     - Protobuf (~> 3.13)
 
 DEPENDENCIES:
-  - Appodeal (= 3.0.1)
-  - PocketAds (from `./PocketAds.podspec`)
+  - AppLovinSDK
+  - Appodeal (>= 3.0.1)
+  - PocketAds/Core (from `./PocketAds.podspec`)
 
 SPEC REPOS:
   trunk:
+    - AppLovinSDK
     - Appodeal
     - OMSDK_Appodeal
     - Protobuf
@@ -79,15 +82,16 @@ EXTERNAL SOURCES:
     :path: "./PocketAds.podspec"
 
 SPEC CHECKSUMS:
+  AppLovinSDK: c72c4cc9dd61ee59827813bc99af35815c08ffd4
   Appodeal: b62e1581b03744ee3dd61d02cc9fdeb33dd5a002
   OMSDK_Appodeal: 0d216e95f5313c64e2cd8a1eb8b45e54b8b138a9
-  PocketAds: 6198e198f375926d34bb41f8800da76896573ae3
-  Protobuf: 02524ec14183fe08fb259741659e79683788158b
+  PocketAds: 164eb090fb24b9f9136d2bd184d70f121f539b70
+  Protobuf: 120350fc38646e2dedc26f49ecba778184ea1de2
   StackConsentManager: db10f9ab43a91440049886c7f09a6ce8114b5f37
-  StackIAB: 7d64308b78476b03caf7162b708cee74c96d4495
+  StackIAB: 268c6c2f5e346e5c11e8f2de1b42e5d272b310d0
   StackModules: 028db56a31130ce7261137e65da94ef157efafa2
   StackProtobuf: 4ce3cf175993834536fbb7260a278400cabeb463
 
-PODFILE CHECKSUM: 6332b9bbf7410eac0cfd658a25cd36c09e4f985d
+PODFILE CHECKSUM: 453aae95bec99587568ca089c223ea0af700b897
 
 COCOAPODS: 1.11.2
