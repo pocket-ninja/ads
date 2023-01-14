@@ -3,7 +3,7 @@ skip_docs
 opt_out_usage
 
 $specsrepo = 'git@github.com:pocket-ninja/specs.git'
-$podspecs = ['PocketAds.podspec', 'PocketAdsMediator.podspec']
+$podspecs = ['PocketAds.podspec']
 
 before_all do |lane, options|
   if options[:skip_checks]
