@@ -7,9 +7,15 @@ import PocketAds
 import UIKit
 
 public struct ApplovinAdUnits {
-    let inter: String
-    let banner: String
-    let rewarded: String
+    public var inter: String
+    public var banner: String
+    public var rewarded: String
+    
+    public init(inter: String, banner: String, rewarded: String) {
+        self.inter = inter
+        self.banner = banner
+        self.rewarded = rewarded
+    }
 }
 
 public final class ApplovinMediator: NSObject, AdsMediator {
