@@ -25,6 +25,10 @@ public final class InterstitialProvider {
     
     public var isEnabled: Bool = false
     
+    public var isReady: Bool {
+        mediator.isReadyToShowInterstitial()
+    }
+    
     public init(config: AdsConfig, mediator: AdsMediator) {
         self.config = config
         self.mediator = mediator
