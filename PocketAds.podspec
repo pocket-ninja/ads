@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name = 'PocketAds'
-    s.version = '1.3.4'
+    s.version = '1.3.5'
     s.summary = 'Pocket Ninja Ads'
     s.description = 'Pocket Ninja Ads'
     s.homepage = 'https://github.com/pocket-ninja/ads'
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
     s.subspec 'AppodealMediator' do |appodeal|
       appodeal.source_files = 'AppodealMediator/Sources/**/*.{h,m,swift}'
       appodeal.dependency 'PocketAds/Core'
-      appodeal.dependency 'Appodeal', '>= 3.0.1'
+      appodeal.dependency 'Appodeal'
     end
 
     s.subspec 'ApplovinMediator' do |applovin|

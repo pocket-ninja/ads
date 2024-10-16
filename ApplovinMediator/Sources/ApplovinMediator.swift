@@ -22,6 +22,7 @@ public final class ApplovinMediator: NSObject, AdsMediator {
     private lazy var rewarded = ApplovinRewardedAdDecorator(adUnitID: adUnits.rewarded)
     private lazy var interstitial = ApplovinInterstitialAdDecorator(adUnitID: adUnits.inter)
     private let adUnits: ApplovinAdUnits
+    private let apiKey: String
     
     public var interstitialDelegate: AdsMediatorInterstitialDelegate? {
         didSet {
@@ -41,7 +42,8 @@ public final class ApplovinMediator: NSObject, AdsMediator {
             CGSize(width: 728, height: 90)
     }
 
-    public init(adUnits: ApplovinAdUnits) {
+    public init(apiKey: String, adUnits: ApplovinAdUnits) {
+        self.apiKey = apiKey
         self.adUnits = adUnits
         super.init()
     }
@@ -50,16 +52,15 @@ public final class ApplovinMediator: NSObject, AdsMediator {
         config: AdsConfig,
         then completion: @escaping (Bool) -> Void
     ) {
-        guard let sdk = ALSdk.shared() else {
-            completion(false)
-            return
+        let sdk = ALSdk.shared()
+        let sdkConfig = ALSdkInitializationConfiguration(sdkKey: apiKey) {
+            $0.mediationProvider = ALMediationProviderMAX
         }
-
+        
         ALPrivacySettings.setHasUserConsent(true)
         rewarded.verbose = config.isVerbose
-        sdk.mediationProvider = ALMediationProviderMAX
         sdk.settings.isVerboseLoggingEnabled = config.isVerbose
-        sdk.initializeSdk { configuration in
+        sdk.initialize(with: sdkConfig) { _ in
             completion(true)
         }
     }
